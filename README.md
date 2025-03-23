@@ -77,7 +77,7 @@ You will need to run the queue for task scheduling and queues, and leave it runn
 ```
 > In production, this command must be used within a supervisord for resiliance.
 
-Create a cron job to process schedules posts. The following process is for **UNIX-like** operating systems. If you are on Windows, follow [these instructions](https://gist.github.com/Splode/94bfa9071625e38f7fd76ae210520d94).
+Create a cron job to process scheduled posts. The following process is for **UNIX-like** operating systems. If you are on Windows, follow [these instructions](https://gist.github.com/Splode/94bfa9071625e38f7fd76ae210520d94).
 ```bash
 # Assuming cron is installed. Follow you distro instructions to install it otherwise.
 crontab -e
@@ -114,7 +114,7 @@ To try the system as admin, login as:
 
 email: **super@root.com**
 
-password: **super@root.com**
+password: **password**
 
 
 To try the system as a normal user, login with any email of the seeded users with password "**password**"
