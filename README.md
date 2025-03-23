@@ -8,13 +8,15 @@
 - [Installation](#installation)
   - [Backend Installation](#backend-installation)
   - [Frontend Installation](#frontend-installation)
+- [Usage](#usage)
 - [Contact](#contact)
 
 # Features
 - Schedule posts for future publication
-- Automatic Posting
+- Automatic posting
 - Robust Validation
-- SPA Experience
+- Role-based actions
+- SPA experience
 - Responsive design
 - Friendly-design
 
@@ -44,8 +46,8 @@ This project consists of 2 sub-projects; API Backend using Laravel, and Frontend
  git clone https://github.com/ahmed-fawzy99/mock-post-scheduler.git
  cd mock-post-scheduler/backend
  composer install
- php artisan key:generate
  cp .env.example .env 
+ php artisan key:generate
  ```
 Then open `.env` file do the following:
 - Fill in your database credentials.
@@ -78,23 +80,42 @@ crontab -e
 # then, inside the cron file add thisL
 * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
 ```
-Run the development server
+Alternatively, because this is testing environment, we can start another terminal instance and run this command:
+```bash
+php artisan schedule:work
+```
+On another terminal tab, Run the development server
 ```bash
 php artisan serve
 ```
 ### Frontend Installation
 
-For Client-side Dependencies:
+For Client-side Dependencies, head to the `frontend` folder:
 ```
  cd ../frontend
  npm install
 ```
-Laravel runs on port 8000 by default. If you have changed this, update `backendBase` and `backendApi` in `nuxt.config.ts
+Laravel runs on port 8000 by default. If you have changed this, update `backendBase` and `backendApi` in `nuxt.config.ts`
 
 Finally, Run the frontend server:
 ```
- npm run dev
+npm run dev -- -o
 ```
+
+# Usage 
+We have seeded the database with platforms, users, and posts. 
+
+To try the system as admin, login as:
+
+email: **super@root.com**
+
+password: **super@root.com**
+
+
+To try the system as a normal user, login with any email of the seeded users with password "**password**"
+
+
+
 
 # Contact
 You can reach me using any of the following media:
