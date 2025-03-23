@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import 'primeicons/primeicons.css';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-bg: #f3f3ef;
+    --color-bg-dark: #262626;
+
+    --animate-float: float 7s ease-in-out infinite;
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+h1 {
+    @apply text-2xl;
+}
+h2 {
+    @apply text-xl;
+}
+
+.wrapper {
+    @apply container mx-auto rounded-lg shadow-sm bg-white dark:bg-neutral-950 p-6;
+}
+.wrapper-main {
+    @apply container mx-auto rounded-lg shadow-sm bg-white dark:bg-neutral-950 p-6 flex justify-center;
+}
+
+.action-div {
+    @apply flex justify-end items-center gap-2 font-semibold rounded-md cursor-pointer px-4 py-2 hover:bg-primary-50 dark:hover:bg-primary-600 transition-colors ease-in-out duration-100;
+}
+
+.div-card {
+    @apply px-8 py-8 shadow-sm rounded-md bg-white dark:bg-neutral-950;
+}
+
+.account-card {
+    @apply container flex flex-col px-8 py-8 shadow-sm rounded-md bg-white dark:bg-neutral-950 w-full ;
+}
+
+/* Light mode background */
+:root {
+    @apply bg-bg dark:bg-bg-dark;
+}
+
+/*.ql-container {*/
+/*    resize: vertical; !* Allow vertical resizing *!*/
+/*    overflow: auto;*/
+/*    min-height: 120px;*/
+/*    max-height: 800px;*/
+/*    width: 100%;*/
+/*}*/
