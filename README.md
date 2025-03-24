@@ -22,8 +22,7 @@
 - Robust Validation
 - Role-based actions
 - SPA experience
-- Responsive design
-- Friendly-design
+- Responsive & friendly design
 
 # Tools & Frameworks
 - Laravel 12
@@ -118,6 +117,9 @@ password: **password**
 
 
 To try the system as a normal user, login with any email of the seeded users with password "**password**"
+
+
+The scheduler works every minute to post pending scheduled posts as an independent job. To extend this behaviour, you can implement your branching logic for each platform in `app/Jobs/Api/V1/ProcessScheduledJobs.php`. I recommnded to create an independent job for each platform and dispatch it for each pending job.
 
 
 

@@ -58,7 +58,7 @@ const displayContent = computed(() => {
       <h2 class="font-medium !text-lg mb-2">
         {{ post.attributes.title }}
       </h2>
-      <div class="inline" v-html="displayContent" />
+      <div class="whitespace-normal break-words overflow-hidden" v-html="displayContent"/>
       <button
           v-if="isContentTruncated"
           @click="showFullContent = !showFullContent"
